@@ -1,3 +1,23 @@
+const wordListUrl = 'https://gist.githubusercontent.com/paulcc/3799331/raw/74207b4ee400469ddbb61d297dbd62f31a3407ce/gistfile1.txt';
+
+// Define the letters along each side of the game board
+const letters = [
+  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
+  "N", "O", "P","Q", "R", "S", "T", "U", "V", "W", "Y", "Z",
+];
+
+// Select the letter button and display area
+const letterDisplay1 = document.querySelector("#letter-display1");
+const letterDisplay2 = document.querySelector("#letter-display2");
+const letterDisplay3 = document.querySelector("#letter-display3");
+
+// Keep track of the currently selected letter
+var currentSelectedLetter = null;
+
+// Define an array of all the squares on the game board
+const squares = document.querySelectorAll(".square");
+const legalSquares = document.querySelectorAll(".square:not(.illegal)");
+
 // Define a function to select a random letter from the letters array
 function getRandomLetter() {
   const randomIndex = Math.floor(Math.random() * letters.length);
@@ -37,27 +57,6 @@ function checkCorrectWords() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  alert("Welcome!");
-
-  const wordListUrl = 'https://gist.githubusercontent.com/paulcc/3799331/raw/74207b4ee400469ddbb61d297dbd62f31a3407ce/gistfile1.txt';
-
-  // Select the letter button and display area
-  const letterDisplay1 = document.querySelector("#letter-display1");
-  const letterDisplay2 = document.querySelector("#letter-display2");
-  const letterDisplay3 = document.querySelector("#letter-display3");
-
-  // Define the letters along each side of the game board
-  const letters = [
-    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
-    "N", "O", "P","Q", "R", "S", "T", "U", "V", "W", "Y", "Z",
-  ];
-
-  // Keep track of the currently selected letter
-  var currentSelectedLetter = null;
-
-  // Define an array of all the squares on the game board
-  const squares = document.querySelectorAll(".square");
-  const legalSquares = document.querySelectorAll(".square:not(.illegal)");
 
   // Add event listeners to the letter displays
   letterDisplay1.addEventListener("click", function() {
