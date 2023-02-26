@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Letter Game</title>
+    <script src="game.js" type="text/js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 id="headline">Letter Game</h1>
+    <p id="description">Click the squares to make words with the letters along the sides.</p>
+        
+    <div id="gameboard">
+    <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <div class="row">
+        <div class="square"></div>
+        <div class="square illegal"></div>
+        <div class="square illegal"></div>
+        <div class="square"></div>
+    </div>
+    <div class="row">
+        <div class="square"></div>
+        <div class="square illegal"></div>
+        <div class="square illegal"></div>
+        <div class="square"></div>
+    </div>
+    <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    </div>
+
+    <div id="result"></div>
+
+    <div class="letter-display" id="letter-display1"></div>
+    <div class="letter-display" id="letter-display2"></div>
+    <div class="letter-display" id="letter-display3"></div>
+
+    <div id="button-container">
+    <button id="start-over" onclick="location.reload()">Start Over</button>
+    </div>
+</body>
+</html>
